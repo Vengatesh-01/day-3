@@ -1,0 +1,112 @@
+:root {
+  --primary: #4CAF50;
+  --secondary: #ff9800;
+  --font: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background-color: #f4f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin: auto;
+  position: relative;
+  animation: fadeIn 1s ease-in;
+}
+
+h2, h3 {
+  text-align: center;
+  color: var(--primary);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: var(--secondary);
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+.members-section {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+#memberList li {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: -300px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: right 0.5s ease;
+  z-index: 1000;
+}
+.toast.show {
+  right: 20px;
+}
+.toast.success { background-color: var(--primary); }
+.toast.error { background-color: crimson; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
